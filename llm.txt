@@ -1,0 +1,28 @@
+# byteCast
+
+> https://bytecast.io
+
+Senior-level white-label Drupal engineering and software architecture built exclusively for digital, web, and creative agencies. We operate as an invisible technical partner, delivering complex Drupal modules, backend systems, and platform migrations entirely under your agency's brand.
+
+## Core Capabilities
+
+*   **Custom Module Architecture:** Precision Drupal backend engineering, custom module development, and standards-compliant implementation.
+*   **Decoupled & Headless Drupal:** Building robust headless architectures, modern API-first integrations, and decoupled layouts.
+*   **Data & System Migration:** Enterprise-grade legacy content and database migrations into clean, modern Drupal structures.
+*   **Infrastructure & Security Audits:** Deep-dive code reviews, rigorous performance tuning, and security hardening for high-traffic environments.
+
+## Engagement Model
+
+*   **100% White-Label:** Completely invisible integration. We plug directly into your agency’s communication channels, project tools, and version control systems without client-facing footprint.
+*   **Target Clients:** Mid-market and enterprise-scale digital agencies needing senior-level architectural support.
+
+## Developer Profile & Verification
+
+*   **Principal Engineer Profile:** Verifiable open-source contributions and community history.
+    *   **Drupal.org Profile:** [globexplorer](https://drupal.org/u/globexplorer)
+
+## Corporate Identity & Contact
+
+*   **Operator:** UPTIDE GROUP LIMITED (United Kingdom)
+*   **Office Address:** 4th Floor, Silverstream House, 45 Fitzroy Street, Fitzrovia, W1T 6EB London, United Kingdom
+*   **Direct Inquiry Email:** ping@bytecast.io
