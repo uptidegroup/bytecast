@@ -1,428 +1,195 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>bytecase.io - High-Performance Decoupled Web Applications</title>
+  <meta name="description" content="Specialized B2B software development and technical consulting focusing on custom backends, custom modules, and elegant decoupled frontends.">
   
-  <!-- Core Search Engine Optimization (SEO) -->
-  <title>byteCast // White-Label Drupal Engineering for Agencies</title>
-  <meta name="description" content="Invisible technical partner for digital agencies. We deliver senior-level custom Drupal modules, architecture, and migrations completely under your brand.">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <link rel="canonical" href="https://bytecast.io/">
+  <!-- AI Crawler & Agentic Search Meta Tags -->
+  <meta name="accessibility-compliance" content="WCAG 2.2 Level AA Standard Conformed">
+  <meta name="ai-agent-browsing" content="optimized">
 
-  <!-- Open Graph / Meta / Facebook / LinkedIn / Slack / Discord -->
-  <meta property="og:locale" content="en_US">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="byteCast // White-Label Drupal Engineering for Agencies">
-  <meta property="og:description" content="Invisible technical partner for digital agencies. We deliver senior-level custom Drupal modules, architecture, and migrations completely under your brand.">
-  <meta property="og:url" content="https://bytecast.io/">
-  <meta property="og:site_name" content="byteCast">
-  <meta property="og:image" content="https://bytecast.io/assets/og-image.png">
-  <meta property="og:image:secure_url" content="https://bytecast.io/assets/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="byteCast - White-Label Drupal Engineering for Agencies logo and text matrix">
-
-  <!-- X / Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="byteCast // White-Label Drupal Engineering for Agencies">
-  <meta name="twitter:description" content="Invisible technical partner for digital agencies. We deliver senior-level custom Drupal modules, architecture, and migrations completely under your brand.">
-  <meta name="twitter:image" content="https://bytecast.io/assets/og-image.png">
-  <meta name="twitter:image:alt" content="byteCast - White-Label Drupal Engineering for Agencies logo and text matrix">
-
-  <!-- Favicons & Manifest -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   
-  <!-- Performance Optimization: Inlined State-of-the-Art CSS Matrix -->
   <style>
-    @font-face {
-      font-family: 'CustomCourier';
-      src: local('Courier New'), local('Courier-New'), local('Courier'), local('Courier New Web');
-      font-display: swap;
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    body {
-      font-family: 'CustomCourier', 'Courier New', Courier, monospace;
-      background-color: #fafafa;
-      color: #111;
-      line-height: 1.6;
-      padding: 3rem 1.5rem;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      border: 1px solid #111;
-      background-color: #fff;
-      box-shadow: 4px 4px 0px #111;
-      contain: layout;
-    }
-
-    header {
-      border-bottom: 1px solid #111;
-      padding: 2.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo-svg {
-      width: 280px;
-      height: auto;
-      display: block;
-    }
-
-    .tagline {
-      font-size: 0.95rem;
-      max-width: 400px;
-      text-align: right;
-    }
-
-    .hero {
-      padding: 3.5rem 2.5rem;
-      border-bottom: 1px solid #111;
-      background-color: #f4f4f4;
-    }
-
-    .hero h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .section-title {
-      padding: 2rem 2.5rem 0.5rem 2.5rem;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 700;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-bottom: 1px solid #111;
-    }
-
-    .grid-item {
-      padding: 2.5rem;
-      border-right: 1px solid #111;
-      border-top: 1px solid #111;
-    }
-
-    .grid-item:last-child {
-      border-right: none;
-    }
-
-    .grid-item h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.75rem;
-      font-weight: 700;
-    }
-
-    .scope {
-      padding: 2.5rem;
-      border-bottom: 1px solid #111;
-    }
-
-    .scope-list {
-      list-style-type: none;
-      margin-top: 1rem;
-    }
-
-    .scope-list li {
-      margin-bottom: 0.5rem;
-      padding-left: 1.5rem;
-      position: relative;
-    }
-
-    .scope-list li::before {
-      content: ">";
-      position: absolute;
-      left: 0;
-      color: #555;
-    }
-
-    /* Corporate & Legal Footer Area */
-    footer {
-      background-color: #111;
-      color: #fff;
-    }
-
-    .footer-top {
-      padding: 3rem 2.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 2rem;
-      border-bottom: 1px solid #333;
-    }
-
-    .corporate-info {
-      font-size: 0.85rem;
-      line-height: 1.5;
-      color: #ccc;
-    }
-
-    .corporate-info strong {
-      color: #fff;
-    }
-
-    .footer-bottom {
-      padding: 1.5rem 2.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      font-size: 0.85rem;
-    }
-
-    .legal-links a, footer a {
-      color: #fff;
-      text-decoration: none;
-      border-bottom: 1px solid #fff;
-      padding-bottom: 2px;
-    }
-
-    .legal-links a:hover, footer a:hover {
-      background-color: #fff;
-      color: #111;
-    }
-
-    .legal-links span {
-      margin: 0 0.5rem;
-      color: #555;
-    }
-
-    /* Pure CSS Modal Overlay Engine */
-    .legal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(2px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s ease;
-      z-index: 1000;
-      padding: 1rem;
-    }
-
-    .legal-overlay:target {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .legal-modal {
-      background: #fff;
-      color: #111;
-      border: 1px solid #111;
-      max-width: 650px;
-      width: 100%;
-      max-height: 80vh;
-      overflow-y: auto;
-      padding: 2.5rem;
-      box-shadow: 6px 6px 0px #111;
-      position: relative;
-    }
-
-    .legal-modal h2 {
-      font-size: 1.3rem;
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid #111;
-      padding-bottom: 0.5rem;
-    }
-
-    .legal-modal h3 {
-      font-size: 1rem;
-      margin: 1.5rem 0 0.5rem 0;
-    }
-
-    .legal-modal p {
-      font-size: 0.85rem;
-      margin-bottom: 1rem;
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 1rem;
-      right: 1.5rem;
-      font-size: 1.5rem;
-      text-decoration: none;
-      color: #111;
-      font-weight: bold;
-    }
-
-    @media (max-width: 800px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-      .grid-item {
-        border-right: none;
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .tagline {
-        text-align: left;
-        margin-top: 0.5rem;
-      }
-      .footer-top {
-        flex-direction: column;
-      }
+    /* Styling to ensure keyboard focus indicators are highly visible for WCAG conformance */
+    *:focus-visible {
+      outline: 3px solid #2563eb !important;
+      outline-offset: 2px !important;
     }
   </style>
 </head>
-<body>
+<body class="min-h-screen flex flex-col font-sans text-slate-900 bg-white antialiased">
 
-  <div class="container">
-    
-    <header role="banner">
-      <div class="logo-container">
-        <!-- Exact Inline Path-Based Production SVG Logo -->
-        <svg class="logo-svg" viewBox="0 0 93.636536 16.639849" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <g transform="translate(-61.114674,-98.01568)">
-            <g aria-label="byteCast" style="fill:#000000; stroke-width:1.6">
-              <path d="m 64.751325,98.01568 v 4.43729 q 0.723472,-0.47267 1.466236,-0.70418 0.752411,-0.24115 1.514468,-0.24115 2.054659,0 3.48231,1.418 1.427651,1.41801 1.427651,3.42443 0,1.91961 -1.360127,3.21222 -1.360127,1.28295 -3.58842,1.28295 -0.790995,0 -1.524113,-0.20257 -0.733118,-0.20257 -1.418005,-0.59807 v 0.48232 h -2.315109 q -0.713826,0 -1.022507,-0.2701 -0.299035,-0.27974 -0.299035,-0.72347 0,-0.43408 0.308682,-0.70418 0.308681,-0.27974 1.01286,-0.27974 h 0.33762 v -8.556261 h -0.33762 q -0.713826,0 -1.022507,-0.270096 -0.299035,-0.279743 -0.299035,-0.723472 0,-0.434083 0.299035,-0.704179 0.308681,-0.279742 1.022507,-0.279742 z m 5.913175,8.39227 q 0,-1.22508 -0.858519,-2.07395 -0.85852,-0.84887 -2.102891,-0.84887 -1.234725,0 -2.093245,0.84887 -0.85852,0.84887 -0.85852,2.04501 0,1.09003 0.771703,1.79421 0.771703,0.69453 2.180062,0.69453 1.408358,0 2.180061,-0.69453 0.781349,-0.70418 0.781349,-1.76527 z" />
-              <path d="m 77.99568,110.45939 -3.424432,-6.71381 q -0.482315,-0.0579 -0.733118,-0.32798 -0.250804,-0.27009 -0.250804,-0.65595 0,-0.44373 0.299035,-0.71382 0.308681,-0.27974 1.022507,-0.27974 h 1.803856 q 0.713825,0 1.01286,0.27974 0.308681,0.27009 0.308681,0.71382 0,0.43409 -0.308681,0.71383 -0.299035,0.2701 -0.954982,0.2701 l 2.334402,4.5434 2.315109,-4.5434 q -0.636655,0 -0.945336,-0.2701 -0.299035,-0.27974 -0.299035,-0.72347 0,-0.43409 0.299035,-0.70418 0.308681,-0.27974 1.022506,-0.27974 h 1.861734 q 0.704179,0 1.003214,0.27974 0.308681,0.27009 0.308681,0.71382 0,0.3955 -0.260449,0.67524 -0.26045,0.2701 -0.771704,0.30869 l -4.533755,8.93246 q 0.742764,0 0.974275,0.14469 0.463022,0.29904 0.463022,0.84888 0,0.43408 -0.308682,0.70418 -0.299035,0.27974 -1.01286,0.27974 h -4.311891 q -0.713826,0 -1.022507,-0.27974 -0.299035,-0.2701 -0.299035,-0.70418 0,-0.44373 0.299035,-0.72347 0.308681,-0.2701 1.022507,-0.2701 h 1.967843 z" />
-              <path d="m 90.468332,103.74558 v 3.96462 q 0,0.63666 0.26045,0.83923 0.405144,0.31832 1.446943,0.31832 1.514468,0 2.797424,-0.6463 0.491961,-0.2508 0.771703,-0.2508 0.385852,0 0.665594,0.28939 0.289389,0.28939 0.289389,0.70418 0,0.38585 -0.308681,0.66559 -0.472668,0.45338 -1.87138,0.83923 -1.389066,0.3762 -2.344049,0.3762 -1.842441,0 -2.768485,-0.79099 -0.916397,-0.80064 -0.916397,-1.9582 v -4.35047 h -0.713825 q -0.713826,0 -1.022507,-0.2701 -0.299035,-0.27974 -0.299035,-0.72347 0,-0.43409 0.299035,-0.70418 0.308681,-0.27974 1.022507,-0.27974 h 0.713825 v -1.784567 q 0,-0.713826 0.270096,-1.012861 0.279743,-0.308681 0.723472,-0.308681 0.434083,0 0.704179,0.308681 0.279742,0.299035 0.279742,1.012861 v 1.784567 h 3.655944 q 0.713825,0 1.01286,0.27974 0.308681,0.27009 0.308681,0.71382 0,0.43409 -0.308681,0.71383 -0.299035,0.2701 -1.01286,0.2701 z" />
-              <path d="m 107.77378,107.15072 h -8.112534 q 0.308681,0.7717 1.090034,1.24437 0.79099,0.47266 2.13183,0.47266 1.09967,0 2.92282,-0.47266 0.75241,-0.19293 1.0418,-0.19293 0.3955,0 0.6656,0.27974 0.27009,0.27975 0.27009,0.70418 0,0.38585 -0.28939,0.65595 -0.38585,0.35691 -1.88102,0.68489 -1.49518,0.31832 -2.8746,0.31832 -2.37298,0 -3.800636,-1.34083 -1.418004,-1.34083 -1.418004,-3.29903 0,-2.0836 1.53376,-3.38585 1.54341,-1.31189 3.54983,-1.31189 1.20579,0 2.209,0.42443 1.01286,0.42444 1.50483,0.9164 0.69453,0.71383 1.1479,1.76527 0.30869,0.73312 0.30869,1.69775 z m -2.18971,-1.97749 q -0.45338,-0.84888 -1.1865,-1.26367 -0.73311,-0.42443 -1.74597,-0.42443 -1.00322,0 -1.73634,0.42443 -0.73311,0.41479 -1.196136,1.26367 z" />
-              <path d="m 118.23035,100.35008 v -0.569129 q 0,-0.289389 0.10611,-0.414791 0.11576,-0.125402 0.29904,-0.125402 0.18328,0 0.28939,0.125402 0.11575,0.125402 0.11575,0.414791 v 2.247589 q 0,0.29903 -0.11575,0.42443 -0.10611,0.1254 -0.28939,0.1254 -0.16399,0 -0.27975,-0.11575 -0.1061,-0.11576 -0.1254,-0.37621 -0.0482,-0.81028 -0.87781,-1.43729 -1.11897,-0.858523 -2.54662,-0.858523 -0.93569,0 -1.76527,0.414793 -0.61736,0.29903 -0.98392,0.73312 -0.63666,0.75241 -1.01286,1.6688 -0.2701,0.67524 -0.2701,1.52412 v 1.418 q 0,1.8135 1.3119,3.15434 1.31189,1.33119 3.04822,1.33119 1.0418,0 1.86174,-0.45338 0.82958,-0.45338 1.60128,-1.36977 0.16399,-0.20257 0.36656,-0.20257 0.17363,0 0.27974,0.1061 0.10611,0.10611 0.10611,0.2701 0,0.22186 -0.41479,0.67524 -0.79099,0.88746 -1.78456,1.34083 -0.98392,0.44373 -1.99678,0.44373 -0.87782,0 -1.78457,-0.33762 -0.69453,-0.26045 -1.14791,-0.60771 -0.45337,-0.34727 -1.11896,-1.1672 -0.65595,-0.82958 -0.89711,-1.52412 -0.24116,-0.70418 -0.24116,-1.5434 v -1.64952 q 0,-1.19614 0.63666,-2.44051 0.6463,-1.25402 1.75562,-1.919611 1.11897,-0.67524 2.42122,-0.67524 2.00643,0 3.45337,1.369771 z" />
-              <path d="m 128.85092,110.52692 v -1.1672 q -1.76527,1.48552 -3.7717,1.48552 -1.45659,0 -2.27653,-0.73311 -0.81993,-0.74277 -0.81993,-1.81351 0,-1.17684 1.08038,-2.05466 1.08039,-0.87781 3.15434,-0.87781 0.55948,0 1.21543,0.0772 0.65595,0.0675 1.41801,0.22187 v -1.3119 q 0,-0.66559 -0.61737,-1.15755 -0.61736,-0.49196 -1.85208,-0.49196 -0.94534,0 -2.65273,0.54983 -0.30868,0.0965 -0.3955,0.0965 -0.15434,0 -0.2701,-0.11576 -0.10611,-0.11575 -0.10611,-0.28939 0,-0.16398 0.0965,-0.26045 0.13505,-0.14469 1.09003,-0.39549 1.50482,-0.40515 2.27652,-0.40515 1.53376,0 2.39228,0.76206 0.85852,0.75241 0.85852,1.70739 v 5.36334 h 1.08039 q 0.29903,0 0.42443,0.11575 0.1254,0.10611 0.1254,0.28939 0,0.17364 -0.1254,0.28939 -0.1254,0.11576 -0.42443,0.11576 z m 0,-4.03215 q -0.56913,-0.16399 -1.20579,-0.24116 -0.63665,-0.0772 -1.34083,-0.0772 -1.76527,0 -2.75884,0.76206 -0.75241,0.56913 -0.75241,1.36012 0,0.73312 0.56913,1.23473 0.57878,0.50161 1.67845,0.50161 1.05145,0 1.94855,-0.41479 0.90675,-0.42444 1.86174,-1.34084 z" />
-              <path d="m 141.05347,102.70378 q 0,-0.27975 0.11576,-0.40515 0.11575,-0.1254 0.28939,-0.1254 0.18328,0 0.29903,0.1254 0.11576,0.1254 0.11576,0.42444 v 1.38906 q 0,0.28939 -0.11576,0.41479 -0.11575,0.12541 -0.29903,0.12541 -0.16399,0 -0.27975,-0.10611 -0.1061,-0.10611 -0.1254,-0.34727 -0.0579,-0.57878 -0.59807,-0.95498 -0.79099,-0.54019 -2.09324,-0.54019 -1.36013,0 -2.11254,0.54983 -0.56913,0.41479 -0.56913,0.92605 0,0.57878 0.67524,0.96463 0.46302,0.27009 1.75562,0.41479 1.68811,0.18328 2.34405,0.41479 0.93569,0.33762 1.38907,0.93569 0.46302,0.59807 0.46302,1.2926 0,1.03215 -0.99357,1.84244 -0.99357,0.80064 -2.91318,0.80064 -1.91961,0 -3.14469,-0.97427 0,0.32797 -0.0386,0.42444 -0.0386,0.0965 -0.1447,0.16398 -0.0965,0.0675 -0.22186,0.0675 -0.17363,0 -0.28939,-0.12541 -0.11576,-0.1254 -0.11576,-0.41479 v -1.6688 q 0,-0.28939 0.10611,-0.41479 0.11576,-0.12541 0.29904,-0.12541 0.17363,0 0.28939,0.12541 0.1254,0.11575 0.1254,0.31832 0,0.44373 0.22186,0.74277 0.33762,0.46302 1.07074,0.7717 0.74277,0.29904 1.8135,0.29904 1.582,0 2.3537,-0.58843 0.7717,-0.58842 0.7717,-1.24437 0,-0.75241 -0.78135,-1.20579 -0.79099,-0.45337 -2.30546,-0.60771 -1.50482,-0.15434 -2.16077,-0.40515 -0.65595,-0.2508 -1.02251,-0.75241 -0.36655,-0.5016 -0.36655,-1.08038 0,-1.0418 1.0225,-1.64952 1.02251,-0.61736 2.44051,-0.61736 1.67846,0 2.7299,0.81994 z" />
-              <path d="m 148.56794,102.17323 h 4.3987 q 0.28939,0 0.41479,0.11576 0.12541,0.11575 0.12541,0.29903 0,0.17363 -0.12541,0.28939 -0.1254,0.11575 -0.41479,0.11575 h -4.3987 v 5.39228 q 0,0.70418 0.55948,1.17685 0.56913,0.47267 1.65916,0.47267 0.81994,0 1.77492,-0.24116 0.95498,-0.2508 1.48553,-0.55949 0.19292,-0.1254 0.31833,-0.1254 0.15434,0 0.27009,0.1254 0.11576,0.11576 0.11576,0.27975 0,0.14469 -0.1254,0.27009 -0.30869,0.31833 -1.50483,0.69454 -1.18649,0.36655 -2.27652,0.36655 -1.418,0 -2.25723,-0.66559 -0.83923,-0.66559 -0.83923,-1.79421 v -5.39228 h -1.49517 q -0.28939,0 -0.41479,-0.11575 -0.12541,-0.11576 -0.12541,-0.29904 0,-0.17363 0.12541,-0.28938 0.1254,-0.11576 0.41479,-0.11576 h 1.49517 v -2.392279 q 0,-0.289389 0.11576,-0.414791 0.11575,-0.125402 0.28939,-0.125402 0.18328,0 0.29903,0.125402 0.11576,0.125402 0.11576,0.414791 z" />
-            </g>
-          </g>
-        </svg>
-      </div>
-      <div class="tagline">
-        [white-label drupal engineering]<br>
-        built exclusively for digital & creative agencies.
-      </div>
-    </header>
+  <!-- Accessible Skip Link: Hidden visually, visible to keyboard navigators when pressing Tab -->
+  <a 
+    href="#main-content" 
+    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-amber-500 focus:text-slate-950 focus:font-bold focus:rounded-md"
+  >
+    Skip to main content
+  </a>
 
-    <main role="main">
-      <section class="hero" aria-label="Introduction">
-        <h1>// THE AGENCY EXTENSION</h1>
-        <p>We work seamlessly in the background as your silent technical partner. We translate complex requirements, custom modules, and enterprise migrations into robust Drupal realities—completely under your brand.</p>
-      </section>
-
-      <div class="section-title">Core Capability Matrix</div>
-      <section class="grid" aria-label="Capabilities">
-        <div class="grid-item">
-          <h3>01 / Engine</h3>
-          <p>Custom module architecture, backend engineering, and clean theme implementation built to modern Drupal standards.</p>
-        </div>
-        <div class="grid-item">
-          <h3>02 / Infrastructure</h3>
-          <p>Complex data migrations, headless/decoupled setups, and third-party API orchestrations that scale.</p>
-        </div>
-        <div class="grid-item">
-          <h3>03 / Audits</h3>
-          <p>Deep-dive code reviews, rigorous performance tuning, and security hardening for high-traffic environments.</p>
-        </div>
-      </section>
-
-      <section class="scope" aria-label="Engagement Model">
-        <div class="section-title" style="padding: 0; margin-bottom: 0.5rem;">Engagement Parameters</div>
-        <p>We plug directly into your project tools, version control, and communication channels without friction.</p>
-        <ul class="scope-list">
-          <li><strong>Project Size:</strong> Mid-Market to Complex Enterprise Systems</li>
-          <li><strong>Workflow:</strong> 100% Invisible White-Label Integration</li>
-          <li><strong>Focus:</strong> Heavy-lifting backend development & structural Drupal architecture</li>
+  <!-- Header -->
+  <header class="border-b border-slate-100 py-4 px-6 bg-white" role="banner">
+    <div class="max-w-4xl mx-auto flex justify-between items-center">
+      <a href="/" aria-label="bytecase.io - Home" class="text-xl font-bold tracking-tight">
+        bytecase<span class="text-blue-600">.io</span>
+      </a>
+      <nav aria-label="Primary site navigation">
+        <ul class="flex gap-6">
+          <li><a href="/services/consulting" class="hover:text-blue-600 font-medium transition-colors">Consulting</a></li>
+          <li><a href="/services/development" class="hover:text-blue-600 font-medium transition-colors">Development</a></li>
+          <li><a href="/contact" class="hover:text-blue-600 font-medium transition-colors">Contact</a></li>
         </ul>
-      </section>
-    </main>
+      </nav>
+    </div>
+  </header>
 
-    <footer role="contentinfo">
-      <div class="footer-top">
-        <div class="corporate-info">
-          <strong>byteCast</strong> is a professional brand operated by:<br>
-          UPTIDE GROUP LIMITED<br>
-          London - Central<br>
-          4th Floor, Silverstream House<br>
-          45 Fitzroy Street, Fitzrovia<br>
-          W1T 6EB London, United Kingdom
+  <!-- Main Content Area -->
+  <main id="main-content" class="flex-grow max-w-4xl mx-auto px-6 py-16 md:py-24 w-full" tabindex="-1" role="main">
+    
+    <!-- Hero Section -->
+    <section aria-labelledby="hero-heading" class="mb-16">
+      <h1 
+        id="hero-heading" 
+        class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight mb-6"
+      >
+        We build fast, secure, and beautiful decoupled architectures.
+      </h1>
+      <p class="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl">
+        High-performance B2B software development and technical consulting. We specialize in custom module design, elegant system integration, and minimalist decoupled frontend systems engineered for humans and AI agents.
+      </p>
+    </section>
+
+    <!-- Core Services Section -->
+    <section aria-labelledby="services-heading" class="mb-20">
+      <h2 
+        id="services-heading" 
+        class="text-xs font-bold uppercase tracking-widest text-blue-600 mb-8"
+      >
+        Our Expertise
+      </h2>
+      
+      <div class="grid gap-8 md:grid-cols-2">
+        <!-- Service Card 1 -->
+        <div class="group border border-slate-100 rounded-xl p-6 bg-white hover:border-slate-200 transition-colors">
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Technical Consulting</h3>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Professional 1-1 architectural reviews, systems design planning, and developer-level consulting designed to optimize decoupled web infrastructures.
+          </p>
+          <a 
+            href="/services/consulting" 
+            class="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800"
+            aria-label="Learn more about our Technical Consulting services"
+          >
+            Learn about consulting &rarr;
+          </a>
         </div>
-        <div>
-          <a href="mailto:hello@bytecast.io">ping@bytecast.io</a><br>
-          <span style="font-size: 0.85rem; color: #ccc;">T: +44 7472897398</span>
+
+        <!-- Service Card 2 -->
+        <div class="group border border-slate-100 rounded-xl p-6 bg-white hover:border-slate-200 transition-colors">
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Decoupled Engineering</h3>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Bespoke backend modules, robust APIs, and ultra-fast, lightweight decoupled frontends built utilizing modern, reliable frameworks.
+          </p>
+          <a 
+            href="/services/development" 
+            class="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800"
+            aria-label="Learn more about our Decoupled Engineering services"
+          >
+            Explore our development capabilities &rarr;
+          </a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div>&copy; 2026 byteCast. All rights reserved.</div>
-        <div class="legal-links">
-          <a href="#privacy">Privacy Policy</a><span>/</span><a href="#terms">Terms of Use</a>
-        </div>
+    </section>
+
+    <!-- Professional Profiles & Social Links -->
+    <section aria-labelledby="socials-heading" class="mb-20 border-t border-slate-100 pt-16">
+      <h2 
+        id="socials-heading" 
+        class="text-xs font-bold uppercase tracking-widest text-blue-600 mb-8"
+      >
+        Connect with us
+      </h2>
+      <p class="text-slate-600 mb-6 max-w-xl">
+        Follow our engineering insights, architectural deep dives, and open-source contributions across our professional networks:
+      </p>
+
+      <ul class="flex flex-wrap gap-4" aria-label="Professional profiles and social networks">
+        <li>
+          <a 
+            href="https://linkedin.com/company/bytecase-io" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-flex items-center gap-2 px-4 py-2 border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+          >
+            <span>LinkedIn</span>
+            <span class="sr-only">(opens in a new window)</span>
+          </a>
+        </li>
+        <li>
+          <a 
+            href="https://x.com/bytecase_io" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-flex items-center gap-2 px-4 py-2 border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+          >
+            <span>Twitter / X</span>
+            <span class="sr-only">(opens in a new window)</span>
+          </a>
+        </li>
+        <li>
+          <a 
+            href="https://github.com/bytecase-io" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-flex items-center gap-2 px-4 py-2 border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+          >
+            <span>GitHub</span>
+            <span class="sr-only">(opens in a new window)</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Direct Booking Call to Action -->
+    <section class="bg-slate-50 border border-slate-100 rounded-2xl p-8 md:p-12 text-center">
+      <h2 class="text-2xl font-bold text-slate-900 mb-3">Let's talk architecture</h2>
+      <p class="text-slate-600 mb-6 max-w-lg mx-auto">
+        Ready to build? Book an audit or discuss integration strategies for your next custom application.
+      </p>
+      <a 
+        href="/contact" 
+        class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-semibold rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-sm"
+      >
+        Schedule a Consultation
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-100 bg-slate-50 py-8 px-6 mt-12" role="contentinfo">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-sm text-slate-600">&copy; 2026 bytecase.io. All rights reserved.</p>
+      
+      <!-- Accessibility AA Compliance Declaration Badge & Link -->
+      <div class="flex items-center gap-4">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800" aria-label="Certified WCAG 2.2 AA Accessible">
+          <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+          WCAG 2.2 AA Compliant
+        </span>
+        <a 
+          href="/accessibility" 
+          class="text-sm text-slate-600 hover:text-slate-900 underline"
+        >
+          Accessibility Policy
+        </a>
       </div>
-    </footer>
-
-  </div>
-
-  <!-- Pure CSS Privacy Policy Modal Overlay -->
-  <div id="privacy" class="legal-overlay">
-    <div class="legal-modal">
-      <a href="#" class="close-btn" aria-label="Close modal">&times;</a>
-      <h2>// PRIVACY POLICY</h2>
-      <p><strong>Effective Date:</strong> January 1, 2026</p>
-      <p>This website is built to respect absolute user privacy. Its deployment operational parameters are stripped down to fundamental structural performance.</p>
-      
-      <h3>1. Data Collection & Processing</h3>
-      <p>We do not collect, harvest, monitor, or process any personal data from visitors on this website. There are no registration fields, subscription logs, or input vectors dynamic to client tracking.</p>
-      
-      <h3>2. Tracking & Cookies</h3>
-      <p>This platform uses zero analytics suites, zero marketing tracking pixels, and zero identification cookies. Your browsing state remains entirely sovereign to your browser instance.</p>
-      
-      <h3>3. Server Logs</h3>
-      <p>Standard network protocol transaction records (such as IP addresses requested at runtime) may be collected purely within transient server logs to guarantee network stability and mitigate DDoS threat vectors. These are deleted automatically.</p>
     </div>
-  </div>
-
-  <!-- Pure CSS Terms of Use Modal Overlay -->
-  <div id="terms" class="legal-overlay">
-    <div class="legal-modal">
-      <a href="#" class="close-btn" aria-label="Close modal">&times;</a>
-      <h2>// TERMS OF USE</h2>
-      <p><strong>Effective Date:</strong> January 1, 2026</p>
-      <p>By interacting with this informational page, you acknowledge adherence to standard internet routing protocols and the parameters defined below.</p>
-      
-      <h3>1. Purpose of Site</h3>
-      <p>This website provides high-level technical scope data regarding the professional white-label enterprise Drupal architecture and module engineering services offered by byteCast.</p>
-      
-      <h3>2. Intellectual Property</h3>
-      <p>The layout frameworks, structural code configurations, and textual copy matrices published on this site are protected assets of UPTIDE GROUP LIMITED unless explicitly open-sourced.</p>
-      
-      <h3>3. Governing Law</h3>
-      <p>Any technical compliance challenges or legal assessments stemming from interactions with this framework are governed under the jurisdictional framework of the United Kingdom.</p>
-    </div>
-  </div>
+  </footer>
 
 </body>
 </html>
